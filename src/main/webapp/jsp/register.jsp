@@ -35,13 +35,13 @@
 	                    <h4 class = "card-subtitle text-center">Register</h4>
 	                    <form id="callMeForm">
 	                        <div class="form-group">
-	                            <input type="text" class="form-control-input" id="fname" name="fname" 
+	                            <input type="text" class="form-control-input" id="fname" name="user.firstName" 
 	                                data-toggle="tooltip" data-placement="bottom"  title = "Please Fill this. First name must not include number">
 	                            <label class="label-control" fors="fname">First Name</label>
 	                            <div class="help-block with-errors" id="error-fname"></div>
 	                        </div>
 	                        <div class="form-group">
-	                            <input type="text" class="form-control-input" id="lname" name="lname" 
+	                            <input type="text" class="form-control-input" id="lname" name="user.lastName" 
 	                            data-toggle="tooltip" data-placement="bottom"  title = "Please Fill this. Last name must not include number"
 	                            >
 	                            <label class="label-control" for="lname">Last Name</label>
@@ -49,7 +49,7 @@
 	                        </div>
 	
 	                        <div class="form-group">
-	                            <input type="email" class="form-control-input" id="email" name="email" 
+	                            <input type="email" class="form-control-input" id="email" name="userAccount.email" 
 	                            data-toggle="tooltip" data-placement="bottom"  title = "Please Fill Your Email. Must be in this form
 	                            xxx@xxxxx.xxx or xxx@xxxxx.xxx.xx"
 	                            >
@@ -59,7 +59,7 @@
 	
 	                        <!-- P A S S W O R D -->
 	                        <div class = "form-group">
-	                            <input type = "password" class = "form-control-input" name = "password" id = "password" 
+	                            <input type = "password" class = "form-control-input" name = "userAccount.password" id = "password" 
 	                             data-toggle="tooltip" data-placement="bottom"  title = "Password Must be 16 characters"
 	                             minlength="16" maxlength="16">
 	                            <label class="label-control" for="password">Password</label>

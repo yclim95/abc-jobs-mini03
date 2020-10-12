@@ -18,12 +18,7 @@
         </action>
         
         <action name="register-process" class="mini03.action.RegisterAction" method="execute">
-        	<result name="success">/jsp/register.jsp</result>
-        </action>
-        
-        
-        <action name="thankyou" class="mini03.action.ThankYouAction" method="execute">
-            <result name="thankyou">/jsp/thankyou.jsp</result>
+        	<result name="success">/jsp/thankyou.jsp</result>
         </action>
         
         <action name="login">

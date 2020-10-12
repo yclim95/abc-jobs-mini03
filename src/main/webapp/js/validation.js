@@ -295,7 +295,7 @@ function registerValidation(){
 	*/
     $("#submit").click(function(){
 
-
+alert("in");
         if(checkBlank(fname) || checkBlank(lname) || checkBlank(email) || checkBlank(password) || checkBlank(confirmedPassword)
         || !checkConfirmedPassword(confirmedPassword,password))
         {
@@ -320,23 +320,30 @@ function registerValidation(){
             if(!checkConfirmedPassword(confirmedPassword,password)){
             	randomeErrorMsg(errorCnfPassword,"Password must match Confirmed Password!");
             }
-            
+            alert("fail");
 		}
 		
 		// Perform the following when the above VALIDATIONS are PASSED.
         else
         {
+        	alert("pass");
 			var fnameVal= $("#fname").val();
 			var lnameVal= $("#lname").val();
 			var emailVal=$("#email").val();
 			var passwordVal=$("#password").val();
 			var cnfPasswordVal=$("#confirmedPassword").val();
-			dataString = 'fname=' + fnameVal + '&lname=' + lnameVal + '&email=' + emailVal + '&password=' + passwordVal + '&confirmed-password=' + cnfPasswordVal;
+			dataString = 'user.firstName=' + fnameVal + '&user.lastName=' + lnameVal + '&userAccount.email=' + emailVal + '&userAccount.password=' + passwordVal;
             $.ajax({
             type:"POST",
-            url:"./thankyou",
+            url:"register-process.action",
             data:dataString,
-            cache:false
+            cache:false,
+            success: function(dataString){
+            	alert(dataString);
+            },
+            error : function(data) {
+				alert("Some error occured.");
+			}
         });
     }
     	return false;
