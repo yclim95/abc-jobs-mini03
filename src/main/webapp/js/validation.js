@@ -69,7 +69,7 @@ Table Of Contents:
 function checkBlank (eID)
 {
 	var value = document.getElementById(eID).value;
-	if (value == "" || value)
+	if (value.trim() == '')
 	{
 	return true;
 	}

@@ -13,16 +13,25 @@
             <result>/index.jsp</result>
         </action>
         
-        <action name="register" class="mini03.action.RegisterAction" method="execute">
-        	<result name="register">/jsp/register.jsp</result>
+         <action name="register">
+            <result>/jsp/register.jsp</result>
         </action>
+        
+        <action name="register-process" class="mini03.action.RegisterAction" method="execute">
+        	<result name="success">/jsp/register.jsp</result>
+        </action>
+        
         
         <action name="thankyou" class="mini03.action.ThankYouAction" method="execute">
             <result name="thankyou">/jsp/thankyou.jsp</result>
         </action>
         
-        <action name="login" class="mini03.action.LoginAction" method="execute">
-        	<result name="login">/jsp/login.jsp</result>
+        <action name="login">
+            <result>/jsp/login.jsp</result>
+        </action>
+        
+        <action name="login-process" class="mini03.action.LoginAction" method="execute">
+        	<result name="success">/jsp/home.jsp</result>
         </action>
         
         <action name="forget-password" class="mini03.action.ForgetPasswordAction" method="execute">

@@ -33,7 +33,7 @@
 	            <div class="col-sm-12 col-md-4 offset-md-4">
 	                <div class="card card-body">
 	                    <h4 class = "card-subtitle text-center">Login</h4>
-	                    <form id="callMeForm" data-toggle="validator" data-focus="false" ACTION="users" METHOD="POST">
+	                    <form id="callMeForm">
 	                    	<!-- EMAIL -->
 	                        <div class="form-group">
 	                            <input type="email" class="form-control-input" id="email" name="email" 

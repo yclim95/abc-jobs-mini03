@@ -7,7 +7,7 @@ public class RegisterAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		
-		return "register";
+		return "success";
 	}
 	
 }
