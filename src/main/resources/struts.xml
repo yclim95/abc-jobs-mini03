@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+    <package name="mini03" extends="struts-default">
+        
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        
+        <action name="register" class="mini03.action.RegisterAction" method="execute">
+        	<result name="register">/jsp/register.jsp</result>
+        </action>
+        
+        <action name="thankyou" class="mini03.action.ThankYouAction" method="execute">
+            <result name="thankyou">/jsp/thankyou.jsp</result>
+        </action>
+        
+        <action name="login" class="mini03.action.LoginAction" method="execute">
+        	<result name="login">/jsp/login.jsp</result>
+        </action>
+        
+        <action name="forget-password" class="mini03.action.ForgetPasswordAction" method="execute">
+        	<result name="forget-password">/jsp/forget-password.jsp</result>
+        </action>
+        
+        <action name="reset-password" class="mini03.action.ResetPasswordAction" method="execute">
+        	<result name="reset-password">/jsp/reset-password.jsp</result>
+        </action>      
+        
+         <action name="home" class="mini03.action.HomeAction" method="execute">
+            <result name="home">/jsp/home.jsp</result>
+        </action>
+        
+        <action name="users" class="mini03.action.UsersAction" method="execute">
+            <result name="users">/jsp/users.jsp</result>
+        </action>
+        
+         <action name="users-search-results" class="mini03.action.UsersSearchResultAction" method="execute">
+            <result name="users-search-results">/jsp/users-search-results.jsp</result>
+        </action>
+        
+        
+        <action name="jobs" class="mini03.action.JobsAction" method="execute">
+            <result name="jobs">/jsp/jobs.jsp</result>
+        </action>
+        
+        <action name="jobs-search-results" class="mini03.action.JobsSearchResultsAction" method="execute">
+            <result name="jobs-search-results">/jsp/jobs-search-results.jsp</result>
+        </action>
+        
+         <action name="profile" class="mini03.action.ProfileAction" method="execute">
+            <result name="profile">/jsp/profile.jsp</result>
+        </action>
+        
+        
+        <action name="profile-update" class="mini03.action.ProfileUpdateAction" method="execute">
+            <result name="profile-update">/jsp/profile-update.jsp</result>
+        </action>
+        
+         <action name="public-profile" class="mini03.action.PublicProfileAction" method="execute">
+            <result name="public-profile">/jsp/public-profile.jsp</result>
+        </action>
+    </package>
+
+</struts>
