@@ -4,6 +4,10 @@ public class UserAccount {
 	private String email;
 	private String password;
 	
+	public UserAccount() {
+		
+	}
+	
 	UserAccount(String email, String pasword){
 		this.setEmail(email);
 		this.setPassword(pasword);

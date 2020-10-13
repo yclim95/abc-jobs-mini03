@@ -1,5 +1,6 @@
 package mini03.dao;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,16 +13,16 @@ import mini03.Database;
 
 public class UserDAO {
 	public void addUserAccount(String firstName, String lastName, String email, String password) throws SQLException {
+		Connection con = Database.getConnection();
 		try {
-			PreparedStatement statement = Database.getConnection()
-					.prepareStatement("insert into user(firstName,lastName) value(?,?)");
+			PreparedStatement statement = con.prepareStatement("insert into user(firstName,lastName) value(?,?)");
 			statement.setString(1,firstName);
 			statement.setString(2,lastName);
 			statement.executeUpdate();
 			
 			
 			int lastID = 0;
-			Statement dbStatement = Database.getConnection().createStatement();
+			Statement dbStatement = con.createStatement();
 			ResultSet lastIDQuery = dbStatement.executeQuery("SELECT * FROM user"); 
 			
 			while (lastIDQuery.next()) {
@@ -29,7 +30,7 @@ public class UserDAO {
 			}
 			
 			String sqlInsert = "insert into useraccount(email,password,userID) value(?,?,?)";
-			statement = Database.getConnection().prepareStatement(sqlInsert);
+			statement = con.prepareStatement(sqlInsert);
 			statement.setString(1,email);
 			statement.setString(2,password);
 			statement.setInt(3,lastID);
@@ -39,8 +40,8 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		finally {
-			if (Database.getConnection() != null) {
-				Database.getConnection().close();
+			if (con != null) {
+				con.close();
 			}
 		}
 

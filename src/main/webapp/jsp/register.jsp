@@ -33,7 +33,7 @@
 	            <div class="col-sm-12 col-md-4 offset-md-4">
 	                <div class="card card-body">
 	                    <h4 class = "card-subtitle text-center">Register</h4>
-	                    <form id="callMeForm">
+	                    <form id="callMeForm" action="register-process.action" method="post">
 	                        <div class="form-group">
 	                            <input type="text" class="form-control-input" id="fname" name="user.firstName" 
 	                                data-toggle="tooltip" data-placement="bottom"  title = "Please Fill this. First name must not include number">
@@ -77,7 +77,7 @@
 	
 	
 	                        <div class="form-group">
-	                            <button type="submit" class="form-control-submit-button" id="submit">Register</button>
+	                            <input type="submit" class="form-control-submit-button" id="submit" value="Register">
 	                        </div>
 	                        <div class="form-message">
 	                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>

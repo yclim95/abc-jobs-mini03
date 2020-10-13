@@ -11,6 +11,10 @@ public class User {
 	private String city;
 	private String country;
 	
+	public User(){
+		
+	}
+	
 	User(String firstName, String lastName){
 		this.setFirstName(firstName);
 		this.setLastName(lastName);

@@ -9,14 +9,38 @@ import mini03.model.UserAccount;
 public class RegisterAction extends ActionSupport {
 	
 	private User user;
-	private UserAccount userAccount;
+	private UserAccount userAccount;	
 	
 	
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+
+	public UserAccount getUserAccount() {
+		return userAccount;
+	}
+
+
+	public void setUserAccount(UserAccount userAccount) {
+		this.userAccount = userAccount;
+	}
+
+
 	@Override
 	public String execute() throws Exception {
-		//UserDAO userDao=new UserDAO();
-		//userDao.addUserAccount(user.getFirstName(), user.getLastName(),
-			//	userAccount.getEmail(), userAccount.getPassword());
+		System.out.println("Register Action");
+		//user = new User();
+		//userAccount = new UserAccount();
+		UserDAO userDao=new UserDAO();
+		userDao.addUserAccount(user.getFirstName(), user.getLastName(),
+				userAccount.getEmail(), userAccount.getPassword());
 		return "success";
 	}
 	

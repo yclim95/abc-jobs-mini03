@@ -341,7 +341,7 @@ alert("in");
             success: function(dataString){
             	alert(dataString);
             },
-            error : function(data) {
+            error : function(dataString) {
 				alert("Some error occured.");
 			}
         });
