@@ -17,7 +17,7 @@
 	<meta property="og:title" content="ABC JOBS -  Your doorstep to start your career and networking platform"/> <!-- title shown in the actual shared post -->
 	<meta property="og:description" content="ABC Jobs is a platform to start your career and professional networking" /> <!-- description shown in the actual shared post -->
 	<meta property="og:type" content="article" />
-<title>ABC JOBS | LOGIN</title>
+	<title>ABC JOBS | LOGIN</title>
 
     <!-- Styles -->
     <%@ include file="./head.jsp" %>  
@@ -32,42 +32,9 @@
 	        <div class="row">
 	            <div class="col-sm-12 col-md-4 offset-md-4">
 	                <div class="card card-body">
-	                    <h4 class = "card-subtitle text-center">Login</h4>
-	                    <form id="callMeForm" action="login-process" method="post">
-	                    	<!-- EMAIL -->
-	                        <div class="form-group">
-	                            <input type="email" class="form-control-input" id="email" name="userAccount.email" 
-	                            data-toggle="tooltip" data-placement="bottom"   title = "Please Fill Your Email. Must be in this form
-	                            xxx@xxxxx.xxx or xxx@xxxxx.xxx.xx"
-	                           >
-	                            <label class="label-control" for="email">Email</label>
-	                            <div class="help-block with-errors" id="error-email"></div>
-	                        </div>
-	
-	
-	                        <!-- P A S S W O R D -->
-	                        <div class = "form-group">
-	                            <input type = "password" class = "form-control-input" name = "userAccount.password" id = "password" 
-	                            title = "Password Must be 16 characters" minlength="16" maxlength="16"
-	                             data-toggle="tooltip" data-placement="bottom"  title = "Password Must be 16 characters">
-	                            <label class="label-control" for="password">Password</label>
-	                            <div class="help-block with-errors" id="error-password"></div>
-	                        </div>
-	
-	
-	                        <div class="form-group">
-	                            <button type="submit" class="form-control-submit-button" id="submit">Login</button>
-	                        </div>
-	                        <div class="form-message">
-	                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
-	                        </div>
-	                    </form>
-	                    <!-- end of call me form -->
-	
-	                    <hr>
-	                    <h4 class = "card-subtitle text-center">Forget Password?</h4>
-	                    <a href="./forget-password">
-	                    <button type="submit" class="form-control-submit-button-outline">Forget Password</button>
+	                    <h4 class = "card-subtitle text-center with-errors">Login Credentials (email / password) is incorrect</h4>	
+	                    <a href="./login">
+	                    <button type="submit" class="form-control-submit-button-outline">Login</button>
 	                    </a>
 	
 	                </div> <!--End of Card-->

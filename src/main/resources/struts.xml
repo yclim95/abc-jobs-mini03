@@ -25,9 +25,15 @@
             <result>/jsp/login.jsp</result>
         </action>
         
+        <action name="home">
+            <result name="home">/jsp/home.jsp</result>
+        </action>
+        
         <action name="login-process" class="mini03.action.LoginAction" method="execute">
         	<result name="success">/jsp/home.jsp</result>
+        	<result name="error">/jsp/login-error.jsp</result>	
         </action>
+        
         
         <action name="forget-password" class="mini03.action.ForgetPasswordAction" method="execute">
         	<result name="forget-password">/jsp/forget-password.jsp</result>
@@ -36,10 +42,6 @@
         <action name="reset-password" class="mini03.action.ResetPasswordAction" method="execute">
         	<result name="reset-password">/jsp/reset-password.jsp</result>
         </action>      
-        
-         <action name="home" class="mini03.action.HomeAction" method="execute">
-            <result name="home">/jsp/home.jsp</result>
-        </action>
         
         <action name="users" class="mini03.action.UsersAction" method="execute">
             <result name="users">/jsp/users.jsp</result>
