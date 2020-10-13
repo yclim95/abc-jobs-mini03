@@ -290,15 +290,15 @@ function registerValidation(){
 	});
 
 
-	/*
+		/*
 	HAPPEN ONCE USER CLICK SUBMIT BUTTON - Register
 	*/
-    $("#submit").click(function(){
+    $("#submit").click(function(event){
 
-alert("in");
         if(checkBlank(fname) || checkBlank(lname) || checkBlank(email) || checkBlank(password) || checkBlank(confirmedPassword)
         || !checkConfirmedPassword(confirmedPassword,password))
         {
+        	event.preventDefault();
             blankErrorMsg(fname,errorFName);
             blankErrorMsg(lname,errorLName);
             blankErrorMsg(email,errorEmail);
@@ -320,33 +320,12 @@ alert("in");
             if(!checkConfirmedPassword(confirmedPassword,password)){
             	randomeErrorMsg(errorCnfPassword,"Password must match Confirmed Password!");
             }
-            alert("fail");
+
+		}
+		else{
+		window.location.replace('register-process');
 		}
 		
-		// Perform the following when the above VALIDATIONS are PASSED.
-        else
-        {
-        	alert("pass");
-			var fnameVal= $("#fname").val();
-			var lnameVal= $("#lname").val();
-			var emailVal=$("#email").val();
-			var passwordVal=$("#password").val();
-			var cnfPasswordVal=$("#confirmedPassword").val();
-			dataString = 'user.firstName=' + fnameVal + '&user.lastName=' + lnameVal + '&userAccount.email=' + emailVal + '&userAccount.password=' + passwordVal;
-            $.ajax({
-            type:"POST",
-            url:"register-process.action",
-            data:dataString,
-            cache:false,
-            success: function(dataString){
-            	alert(dataString);
-            },
-            error : function(dataString) {
-				alert("Some error occured.");
-			}
-        });
-    }
-    	return false;
 	}); // End of Validation for register
 };
 	
@@ -662,18 +641,19 @@ function updateProfileValidation(){
 	/*
 	HAPPEN ONCE USER CLICK SUBMIT BUTTON - Register
 	*/
-    $("#submit").click(function(){
+    $("#submit").click(function(event){
 
 
         if(checkBlank(fname) || checkBlank(lname) || checkBlank(email) || checkBlank(password) ||
         checkBlank(currentJob) ||checkBlank(contactNo) || checkBlank(biography))
         {
-           // blankErrorMsg(fname,errorFName);
-           // blankErrorMsg(lname,errorLName);
-           // blankErrorMsg(email,errorEmail);
-           // blankErrorMsg(password,errorPassword);
-           // blankErrorMsg(currentJob,errorCurrentJob);
-           // blankErrorMsg(contactNo,errorContactNo);
+        	event.preventDefault();
+           blankErrorMsg(fname,errorFName);
+           blankErrorMsg(lname,errorLName);
+           blankErrorMsg(email,errorEmail);
+           blankErrorMsg(password,errorPassword);
+           blankErrorMsg(currentJob,errorCurrentJob);
+           blankErrorMsg(contactNo,errorContactNo);
             blankErrorMsg(biography,errorBiography);
 
             if(!checkEmail(email)){

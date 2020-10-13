@@ -39,11 +39,7 @@ public class UserDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		finally {
-			if (con != null) {
-				con.close();
-			}
-		}
+		
 
 	}
 }

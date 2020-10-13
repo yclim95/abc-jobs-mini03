@@ -21,6 +21,7 @@
 
     <!-- Styles -->
     <%@ include file="./head.jsp" %>  
+    
 </head>
 <body>
 	<!--  Header -->
@@ -33,11 +34,11 @@
 	            <div class="col-sm-12 col-md-4 offset-md-4">
 	                <div class="card card-body">
 	                    <h4 class = "card-subtitle text-center">Register</h4>
-	                    <form id="callMeForm" action="register-process.action" method="post">
+	                    <form id="callMeForm" action="register-process" method="post">
 	                        <div class="form-group">
 	                            <input type="text" class="form-control-input" id="fname" name="user.firstName" 
 	                                data-toggle="tooltip" data-placement="bottom"  title = "Please Fill this. First name must not include number">
-	                            <label class="label-control" fors="fname">First Name</label>
+	                            <label class="label-control" for="fname">First Name</label>
 	                            <div class="help-block with-errors" id="error-fname"></div>
 	                        </div>
 	                        <div class="form-group">
