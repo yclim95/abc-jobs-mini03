@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
@@ -28,7 +29,7 @@
 
                 <li class="nav-item">
                     <a class="btn nav-link page-scroll logout">
-                    	<span><i class="far fa-user-circle"></i> YC Lim</span>
+                    	<span><i class="far fa-user-circle"></i> <s:property value="firstName" /></span>
                     </a>
                     <div class="hide">
                     	<a href="./">Logout</a>

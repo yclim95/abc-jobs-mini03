@@ -323,7 +323,7 @@ function registerValidation(){
 
 		}
 		else{
-		window.location.replace('register-process');
+		window.location.replace('thankyou');
 		}
 		
 	}); // End of Validation for register
@@ -407,17 +407,8 @@ function loginValidation(){
         else
         {
 
-			var emailVal=$("#email").val();
-			var passwordVal=$("#password").val();
-			dataString = 'email=' + emailVal + '&password=' + passwordVal;
-            $.ajax({
-            type:"POST",
-            url:"./home",
-            data:dataString,
-            cache:false
-        });
-    }
-    	return false;
+			window.location.replace('home');
+        }
 	}); // End of Validation for login
 };
 
@@ -610,9 +601,9 @@ function updateProfileValidation(){
 	
 	$( '#current-job' ).keydown(function(e) {
 		if (!checkalpha(e)){
-			alphaErrorMsg(errorBiography);
+			alphaErrorMsg(errorCurrentJob);
 		}else{
-			randomeErrorMsg(errorBiography,"");
+			randomeErrorMsg(errorCurrentJob,"");
 		}
 	});
 	
@@ -628,13 +619,6 @@ function updateProfileValidation(){
 		}
 	});
 	
-		$( '#biography' ).keydown(function(e) {
-		if (!checkalpha(e)){
-			alphaErrorMsg(errorBiography);
-		}else{
-			randomeErrorMsg(errorBiography,"");
-		}
-	});
 	
 
 
@@ -654,7 +638,7 @@ function updateProfileValidation(){
            blankErrorMsg(password,errorPassword);
            blankErrorMsg(currentJob,errorCurrentJob);
            blankErrorMsg(contactNo,errorContactNo);
-            blankErrorMsg(biography,errorBiography);
+        	blankErrorMsg(biography,errorBiography);
 
             if(!checkEmail(email)){
                 emailPrintMsg(errorEmail);
@@ -669,22 +653,9 @@ function updateProfileValidation(){
             }
   
 		}
+		else{
+		window.location.replace('profile-update-process');
+		}
 		
-		// Perform the following when the above VALIDATIONS are PASSED.
-        else
-        {
-
-			var fNameVal=$("#fname").val();
-			dataString = 'fname=' + fNameVal;
-            $.ajax({
-            type:"POST",
-            url:"./profile",
-            data:dataString,
-            cache:false
-        });
-       }
-		
-		
-    	return false;
 	}); // End of Validation for Update Profile
 };

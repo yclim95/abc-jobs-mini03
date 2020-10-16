@@ -12,8 +12,9 @@ public class LoginDAO {
 		Connection con = Database.getConnection();
 		ResultSet numOfRecord = null;
 		try {
-			PreparedStatement statement = con.prepareStatement("SELECT * from userAccount where email =?");
+			PreparedStatement statement = con.prepareStatement("SELECT * from userAccount where email =? AND password =?");
 			statement.setString(1,email);
+			statement.setString(2,password);
 			numOfRecord = statement.executeQuery();
 		}catch (Exception e) {
 			e.printStackTrace();

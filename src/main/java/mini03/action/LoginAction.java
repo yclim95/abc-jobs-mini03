@@ -30,7 +30,10 @@ public class LoginAction extends ActionSupport{
 		numOfRecord = loginDao.validateLoginCreditial(userAccount.getEmail(), userAccount.getPassword());
 		System.out.println(numOfRecord);
 		if (numOfRecord.next())
+		{
 			result =  "success";
+		}
+
 		else
 			result = "error";
 		

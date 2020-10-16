@@ -33,7 +33,7 @@
 	            <div class="col-sm-12 col-md-4 offset-md-4">
 	                <div class="card card-body">
 	                    <h4 class = "card-subtitle text-center">Login</h4>
-	                    <form id="callMeForm" action="login-process" method="post">
+	                    <form id="callMeForm" action="home" method="post">
 	                    	<!-- EMAIL -->
 	                        <div class="form-group">
 	                            <input type="email" class="form-control-input" id="email" name="userAccount.email" 
