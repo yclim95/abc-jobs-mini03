@@ -26,16 +26,24 @@ public class LoginAction extends ActionSupport{
 		System.out.println("Login Action");
 		String result = "";
 		ResultSet numOfRecord = null;
+		String grantLevel = "";
 		LoginDAO loginDao = new LoginDAO();
 		numOfRecord = loginDao.validateLoginCreditial(userAccount.getEmail(), userAccount.getPassword());
-		System.out.println(numOfRecord);
+		grantLevel = loginDao.getGrantLevel(userAccount.getEmail(), userAccount.getPassword());
+		System.out.println("Output: " + grantLevel);
 		if (numOfRecord.next())
 		{
-			result =  "success";
+			System.out.println("Output: " + grantLevel);
+			if (grantLevel.equals("programmer")) 
+				result =  "success-user";
+			else 
+				result =  "success-admin";
 		}
 
 		else
 			result = "error";
+		
+		System.out.println("Result: " + result);
 		
 		return result;
 	}

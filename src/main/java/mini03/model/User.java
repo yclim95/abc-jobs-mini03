@@ -11,28 +11,6 @@ public class User {
 	private String city;
 	private String country;
 	
-	public User(){
-		
-	}
-	
-	User(String firstName, String lastName){
-		this.setFirstName(firstName);
-		this.setLastName(lastName);
-	}
-	
-	User(String firstName, String lastName, String contactNo, String currentCompany,
-			String currentJob, String skills, String biography, String city, String country){
-		this.setFirstName(firstName);
-		this.setLastName(lastName);
-		this.setContactNo(contactNo);
-		this.setCurrentCompany(currentCompany);
-		this.setCurrentJob(currentJob);
-		this.setSkills(skills);
-		this.setBiography(biography);
-		this.setCity(city);
-		this.setCountry(country);
-	}
-	
 	public String getFirstName() {
 		return firstName;
 	}

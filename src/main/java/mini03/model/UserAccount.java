@@ -4,15 +4,6 @@ public class UserAccount {
 	private String email;
 	private String password;
 	
-	public UserAccount() {
-		
-	}
-	
-	UserAccount(String email, String pasword){
-		this.setEmail(email);
-		this.setPassword(pasword);
-	}
-	
 	public String getEmail() {
 		return email;
 	}
@@ -25,6 +16,6 @@ public class UserAccount {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	
 }
